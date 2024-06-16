@@ -6,7 +6,7 @@ import logger from '@/lib/logger'
 
 const prisma = new PrismaClient()
 
-export async function createProduct(jsonProductAsString: string) {
+export async function createProduct(jsonProductAsString: string = "") {
 	const jsonProduct = await JSON.parse(jsonProductAsString)
 	// product validation if applicable
 	const createdProduct = await prisma.product.create({

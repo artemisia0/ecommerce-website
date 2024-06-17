@@ -13,37 +13,29 @@ export default function CRUDProductsPage() {
 
 	const fields = [
 		{
-			label: "label",
+			label: "Name",
 			type: "text",
 			name: "name",
-			required: true,
-			placeholder: "Hello placeholder",
 		},
 		{
-			label: "label2",
+			label: "Description",
 			type: "textarea",
-			name: "name2",
-			required: true,
-			placeholder: "Hello placeholder",
+			name: "description",
 		},
 		{
-			label: "label4",
-			type: "email",
-			name: "name4",
-			required: true,
-			placeholder: "Hello placeholder",
-		},
-		{
-			label: "label5",
-			type: "password",
-			name: "name5",
-			required: true,
-			placeholder: "Hello placeholder",
-		},
-		{
-			label: "label6",
+			label: "Size",
 			type: "text",
-			name: "name6",
+			name: "size",
+		},
+		{
+			label: "Color",
+			type: "text",
+			name: "color",
+		},
+		{
+			label: "Sex",
+			type: "text",
+			name: "sex",
 		},
 	]
 

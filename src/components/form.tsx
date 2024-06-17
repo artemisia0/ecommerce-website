@@ -20,9 +20,10 @@ export default function Form(
 ) {
 	return (
 		<form className="p-3 m-3 bg-zinc-300 shadow-inner shadow-md rounded border-2 border-zinc-400 flex flex-col justify-center items-center align-center gap-y-3">
+			<p className="flex flex-row justify-center items-center align-center text-lg">{title}</p>
 
 			{fields && fields.map(
-				({ label, name, type, placeholder="", required=false }
+				({ label, name, type, placeholder="", required=true }
 					: FieldType) =>
 					<div key={title+name} className="w-full flex flex-row justify-center items-center align-center gap-x-3 p-2">
 						<label htmlFor={title+name}>{label}</label>

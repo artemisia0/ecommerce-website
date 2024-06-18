@@ -3,7 +3,9 @@ import tableCellClassName from '@/lib/tablecellclassname'
 
 export function Th(
 	{ children, className="", ...props }:
-	{ children: React.ReactNode | string; className?: string; }
+	{ children: React.ReactNode | string; className?: string;
+		[key: string]: any;
+	}
 ) {
 	return (
 		<th className={ tableCellClassName + " " + className } {...props}>
@@ -14,7 +16,9 @@ export function Th(
 
 export function Td(
 	{ children, className="", ...props }:
-	{ children: React.ReactNode | string; className?: string; }
+	{ children: React.ReactNode | string; className?: string;
+		[key: string]: any;
+	}
 ) {
 	return (
 		<td className={ tableCellClassName + " " + className } {...props}>
@@ -25,7 +29,9 @@ export function Td(
 
 export function Tr(
 	{ children, className="", ...props }:
-	{ children: React.ReactNode | string; className?: string; }
+	{ children: React.ReactNode | string; className?: string;
+		[key: string]: any;
+	}
 ) {
 	const tableRowClassName = "divide-x divide-zinc-300"
 	return (

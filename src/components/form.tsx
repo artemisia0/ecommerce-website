@@ -1,6 +1,8 @@
 export default function Form(
 	{ children, className="", ...props }:
-	{ children: React.ReactNode; className?: string; }
+	{ children: React.ReactNode; className?: string;
+		[key: string]: any;
+	}
 
 ) {
 	return (

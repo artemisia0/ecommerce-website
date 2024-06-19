@@ -40,8 +40,8 @@ export default function PropertiesEditor(
 ) {
 	const propertyKeys = Object.keys(properties)
 	const [state, dispatch] = useReducer(propertiesStateReducer, {})
-	const [addKeySelectorValue, setAddKeySelectorValue] = useState<string | undefined>(notUsedPropertyKeys(propertyKeys, state).length >= 1 ? notUsedPropertyKeys(propertyKeys, state)[0] : undefined)
-	const [addValueSelectorValue, setAddValueSelectorValue] = useState<string | undefined>(properties[addKeySelectorValue].length >= 1 ? properties[addKeySelectorValue][0] : undefined)
+	const [addKeySelectorValue, setAddKeySelectorValue] = useState<string>(notUsedPropertyKeys(propertyKeys, state).length >= 1 ? notUsedPropertyKeys(propertyKeys, state)[0] : "____")
+	const [addValueSelectorValue, setAddValueSelectorValue] = useState<string>(properties[addKeySelectorValue].length >= 1 ? properties[addKeySelectorValue][0] : "____")
 
 	const onAddKeySelectorChange = (event: React.ChangeEvent<HTMLSelectElement>) =>
 	{
@@ -70,7 +70,7 @@ export default function PropertiesEditor(
 							<Tr key={key}>
 								<Td className="capitalize">{key}</Td>
 								<Td>
-									<SelectOnWhiteBg defaultValue={state[key]}>
+									<SelectOnWhiteBg defaultValue={state[key]} name={key}>
 										{properties[key].map(
 											(value) => {
 												return (
